@@ -1,81 +1,77 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-# Dashboard Exercise 1: Retail Dashboard
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-## License
-This code is hosted in a private repository to regulate access. 
-You can share your work under MIT license.
-After completing the module host the end product in an open repository.  
+<img src="https://raw.githubusercontent.com/DataDisca/django_api1/master/DataDisca-Logo.svg_d400.png" width="75" height="25" />
+
+# Analysis and Visualisation Basics 
+Data extraction, transformation and loading are crucial skills for any Data Scientist. 
+There are numerous examples where the problems are solved with the right statistics and visualisations before applying any specialised machine learning algorithm. 
 
 ## Branch
  Make sure you know your branch of this module.  
- The modules are evolving. 
+ We continue to improve the modules based on your feedbacks and submitted outputs. 
  Therefore, we create a branch for you when we assign the module.  
- Read `README.md` of your branch.
+ Go through the `README.md` of your branch.
  
  ARE YOU READING THE RIGHT BRANCH?
  
  If there is any doubt contact DataDisca.
- 
- ## 
- 
- ## Application
- Note: The following is the basic guid line, you need to make the dashboard user friendly and easy to follow.
-1. Download [Online Retail II Data Set](https://archive.ics.uci.edu/ml/datasets/Online+Retail+II). URL:https://archive.ics.uci.edu/ml/datasets/Online+Retail+II
-1. Read the data descriptions given on the download website 
-1. Create a dashboard with the following features:  
-      
-    * Selections at the top:
-        Year 2009, 2010, 2011, 2012 or all. All is the default  
-        Top N: N = 10 default, 10, 20,50 and 100 are the possible values        
-    * Left Top:  
-        Top N products based on the quantity barchart  
-        Below the plot:   Show what percentage of the total quantity covered by the top N  
-        Tool tip: Number, percentage from the total quantity,percentage from the total price         
-    * Right Top:  
-        Top N products based on the total revenue barchart  
-        Below the plot: Show what percentage of the total price (revenue of the item) covered by the top N
-        Tool tip: Number, percentage from the total quantity,percentage from the total price
-    * Left Bottom:  
-        Top N Customers based on number of invoices: Bubble chart   
-        Below the plot: Show what percentage of the total covered by the top N  
-        Tool tip: Number, percentage from the total quantity,percentage from the total price, Customers country for the most purchases
-    * Right Bottom:     
-        Top N Customers based on total price : Bubble chart   
-        Below the plot: Show what percentage of the total covered by the top N  
-        Tool tip: Number, percentage from the total quantity,percentage from the total price, Customers country for the most purchases
 
-2.  Create a dashboard with the following features:
-    * Selections at the top:
-        Year 2009, 2010, 2011, 2012 or all. All is the default
-    * Left Top:  
-        A table with Stock codes, descriptions, total quantities and total prices based on the revenue order by default, 
-        but sortable by the other fields         
-        A row can be selected at a time, then the remaining graphs should change for the selection. If not selected the total will show. 
-    * Middle Top:  
-        A pie chard for quantities in each year
-        Tool tip: Number, percentage from the total quantity,percentage from the total price
-    * Right Top:  
-        A pie chard for revenues in each year
-        Tool tip: Number, percentage from the total quantity,percentage from the total price    
-    * Middle Left:
-        Time series quantity plot with 1 year forecast, with weekly granularity. Different colour for the forecast
-        Tool tip: Number, revenue
-    * Middle right:     
-        Time series Total price plot with 1 year forecast, with weekly granularity. Different colour for the forecast
-        Tool tip: Number, revenue
-    * Bottom Full Width:  
-        Radio button pair to select the quantity or total price, 
-        and below that a world map with colours based on the values for the countries.
-        Tooltips should show quantity, total price, average price, number of invoices, number of customers 
-         
+This code is hosted in a private repository to regulate access.
+After completing the module, you can host your work in an open repository under MIT license. 
+
+Please help us by reporting all type of errors. 
+
+## Study
+
+1. Study basic Python unless you are already familiar with the same
+2. Study `numpy` using a tutorial found on the internet.    
+3. Study `pandas` using a tutorial found on the internet.
+4. Study  `pandas_profiling` [https://pypi.org/project/pandas-profiling/](https://pypi.org/project/pandas-profiling/)
+5. Study `dtale` [https://pypi.org/project/dtale/](https://pypi.org/project/dtale/)
+6. Study `Plotly` (Python) using a tutorial found on the internet
+7. Study `folium` (Python) using a tutorial found on the internet
+
+## Application
+Steps:  
+
+1. Download 
+`Quarterly median rents by local government area - June quarter 2021` dataset from [https://www.dhhs.vic.gov.au/publications/rental-report](https://www.dhhs.vic.gov.au/sites/default/files/documents/202108/Quarterly%20median%20rents%20by%20local%20government%20area%20-%20June%20quarter%202021.xlsx)
+3. Perform necessary handling to import the dataset into a pandas dataframe.
+4. Save the extracted dataset in .csv and .json formats
+5. How many columns the dataset has?
+6. How many rows the dataset has?
+7. Complete the following table about the dataset columns
+
+| Field Name | Description | Pandas Data Type | Data Scale | Min Value | Max Value | Unique Values | Missing Value Count |    
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |  
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+7. Use the following plotly chart types at least once to discuss the data characteristics.   
+    1. Scatter [https://plotly.com/python/line-and-scatter/](https://plotly.com/python/line-and-scatter/)
+    1. Pie [https://plotly.com/python/pie-charts/](https://plotly.com/python/pie-charts/)
+    1. Bubble [https://plotly.com/python/bubble-charts/](https://plotly.com/python/bubble-charts/)
+    1. Bar [https://plotly.com/python/bar-charts/](https://plotly.com/python/bar-charts/)
+    1. Histogram  [https://plotly.com/python/histograms/](https://plotly.com/python/histograms/)
+    1. Maps [https://plotly.com/python/maps/](https://plotly.com/python/maps/)
+8. Calculate Pearson and Spearman correlation matrices between numerical columns/series as applicable. 
+And show the results on annotated heatmaps [https://plotly.com/python/annotated-heatmap/](https://plotly.com/python/annotated-heatmap/)   
+9. Use folium maps to display and annotate geographic data. [http://python-visualization.github.io/folium/](http://python-visualization.github.io/folium/).
+Note: You need to learn both Plotly and Folium.
+10. Write a statistical summary for the dataset. What have you found? 
+11. Upload neatly arranged code/Jupyter notebook, Readme.md for Git and your work to your Git Repository.
+
+## Quality Standard of Your Work
+1. Code should follow PEP8 Standard
+1. Host your code on your GitHub in a public or private repository as you prefer. 
+- If it is a public repository, send the link for us to evaluate.
+- If it is a private repository, share (view only) with our GitHub usernames. Please contact us for them.
+
+    Send us a notification to start the evaluation.
+    We evaluate your code for your technical progress.
+
 ## Sponsor
 DataDisca Pty Ltd, Melbourne, Australia
 
 [https://www.datadisca.com](https://www.datadisca.com)
 
-        
-          
-        
-    
  
 
